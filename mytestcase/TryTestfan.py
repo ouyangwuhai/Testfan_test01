@@ -20,7 +20,7 @@ class Testfan(unittest.TestCase):
         driver = self.driver
         driver.get(self.base_url + "/")
         mymouse = WebDriverWait(driver,20,0.5).until(EC.presence_of_element_located((By.LINK_TEXT,"学习资料")))
-    #  mymouse = driver.find_element_by_link_text("学习资料")
+    #   mymouse = driver.find_element_by_link_text("学习资料")
     #   mymouse = driver.find_element_by_xpath("//a[@href = '/page/20/htm']")
         ActionChains(driver).move_to_element(mymouse).perform()
         driver.find_element_by_link_text("精品文章").click()
