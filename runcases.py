@@ -4,6 +4,7 @@ import unittest
 import HTMLTestRunner
 import smtplib
 import os
+import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
@@ -23,6 +24,7 @@ fp = open(reportname,"wb")
 runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title="综合测试结果",description="测试结果")
 runner.run(mysuite)
 
+time.sleep(3)
 #发送邮件
 #基本信息配置
 smtpserver = 'smtp.qq.com'        #发件人邮箱服务器
