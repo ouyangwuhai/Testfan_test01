@@ -31,7 +31,7 @@ time.sleep(3)
 #基本信息配置
 smtpserver = 'smtp.qq.com'        #发件人邮箱服务器
 username = '303423249@qq.com'     #发件人邮箱地址
-password = 'qthyfnszdkesbgfb'     #密码是邮箱使用客户端的授权码
+password = 'aefckahurqxvbjbj'     #密码是邮箱使用客户端的授权码
 sender = '303423249@qq.com'       #发件人邮箱地址
 receiver = ['303423249@qq.com']   #收件人邮箱地址
 subject = 'runcases_result test report'     #邮件主题
