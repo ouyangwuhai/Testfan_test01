@@ -15,6 +15,7 @@ from email.mime.application import MIMEApplication
 #右击Mark Directory as ...  -> Source root则会
 from mytestcase import TryBaidu
 from mytestcase import TryTestfan
+import os
 
 mysuite = unittest.TestSuite()
 mysuite.addTest(unittest.makeSuite(TryBaidu.BaiduTest))
@@ -23,6 +24,7 @@ reportname = "runcases_result.html"
 fp = open(reportname,"wb")
 runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title="综合测试结果",description="测试结果")
 runner.run(mysuite)
+fp.close()
 
 time.sleep(3)
 #发送邮件
@@ -34,7 +36,8 @@ sender = '303423249@qq.com'       #发件人邮箱地址
 receiver = ['303423249@qq.com']   #收件人邮箱地址
 subject = 'runcases_result test report'     #邮件主题
 mailbody = "Hi!\nHow are you?\nHere is your report" #邮件正文
-report_dir = report_dir = os.path.abspath('.') + "\\runcases_result.html"
+
+report_dir = os.path.abspath('.') + "\\runcases_result.html"
 
 #构造邮件内容
 msg = MIMEMultipart()     #创建MIMEMultipart邮件对象，类型为mixed
