@@ -20,7 +20,7 @@ import os
 mysuite = unittest.TestSuite()
 mysuite.addTest(unittest.makeSuite(TryBaidu.BaiduTest))
 mysuite.addTest(unittest.makeSuite(TryTestfan.Testfan))
-reportname = "runcases_result.html"
+reportname = "C:\\Users\\Administrator\\.jenkins\\workspace\\Testfan_demo01\\Reportruncases_result.html"
 fp = open(reportname,"wb")
 runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title="综合测试结果",description="测试结果")
 runner.run(mysuite)
